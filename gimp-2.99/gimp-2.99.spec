@@ -3,13 +3,13 @@
 
 %global major 2
 %global minor 99
-%global micro 8
+%global micro 10
 %global binver %{major}.%{minor}
 %global lib_api_version %{major}.%{minor}
 %global gettext_version 30
 
-%global commit          71c2fd63b8748867c5c5c1de355f667a1dfe512a
-%global snapshotdate    20211019
+%global commit          618e11e602418e8c9639991b73a2a7f2b302ac38
+%global snapshotdate    20220223
 %global shortcommit     %(c=%{commit}; echo ${c:0:7})
 
 Name:       gimp-2.99
