@@ -27,8 +27,7 @@ Source0:       https://gitlab.gnome.org/GNOME/gimp/-/archive/%{commit}/gimp-%{co
 Patch1:         gimp-2.99-cm-system-monitor-profile-by-default.patch
 # bz#1706653
 Patch2:         gimp-2.99-default-font.patch
-# use external help browser directly if help browser plug-in is not built
-Patch3:         gimp-2.99-external-help-browser.patch
+
 
 BuildRequires:  aalib-devel
 BuildRequires:  curl
@@ -183,18 +182,11 @@ Requires:       %{name}-devel = %{version}-%{release}
 The %{name}-devel-tools package contains gimptool, a helper program to
 build GNU Image Manipulation Program (GIMP) plug-ins and extensions.
 
-%package help-browser
-Summary:        GIMP help browser plug-in
-License:        GPLv3+
-Requires:       %{name}%{?_isa} = %{version}-%{release}
 
-%description help-browser
-The %{name}-help-browser package contains a lightweight help browser plugin for
-viewing GIMP online help.
 
 %prep
 %autosetup -p1 -n gimp-%{commit}
-sed -i "s|0.4.27|0.4.26|" meson.build
+
 
 %build
 %meson %{!?with_heif:-Dheif=disabled}
@@ -288,7 +280,6 @@ appstream-util validate-relax --nonet %{buildroot}%{_datadir}/appdata/*.xml
 
 %dir %{_libdir}/gimp
 %dir %{_libdir}/gimp/%{lib_api_version}
-%exclude %{_libdir}/gimp/%{lib_api_version}/plug-ins/help-browser
 %dir %{_libdir}/girepository-1.0
 %{_libdir}/girepository-1.0/Gimp-3.0.typelib
 %{_libdir}/girepository-1.0/GimpUi-3.0.typelib
@@ -340,7 +331,7 @@ appstream-util validate-relax --nonet %{buildroot}%{_datadir}/appdata/*.xml
 %{_libdir}/libgimpwidgets-3.0.so.0*
 
 %files devel
-%doc HACKING README.i18n
+%doc HACKING.md README.md
 %doc %{_datadir}/gtk-doc
 %{_libdir}/*.so
 %{_includedir}/gimp-3.0
@@ -359,8 +350,7 @@ appstream-util validate-relax --nonet %{buildroot}%{_datadir}/appdata/*.xml
 %{_bindir}/gimptool-%{lib_api_version}
 %{_mandir}/man1/gimptool-%{lib_api_version}.1*
 
-%files help-browser
-%{_libdir}/gimp/%{lib_api_version}/plug-ins/help-browser
+
 
 %changelog
 * Tue Dec 7 11:36:41 MSK 2021 Pavel Artsishevsky <polter.rnd@gmail.com> - 2.99.8-2
