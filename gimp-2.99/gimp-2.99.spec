@@ -13,7 +13,7 @@
 %global shortcommit     %(c=%{commit}; echo ${c:0:7})
 
 Name:       gimp-2.99
-Version:    2.99.8
+Version:    2.99.10
 Release:    2%{?dist}
 Summary:    GNU Image Manipulation Program
 
