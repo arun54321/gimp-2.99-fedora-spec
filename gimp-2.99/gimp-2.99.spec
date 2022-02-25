@@ -125,6 +125,11 @@ Recommends:     luajit
 Recommends:     pygobject2
 Recommends:     rawtherapee
 
+
+%undefine _auto_set_build_flags
+RPM_OPT_FLAGS=x86_64 -O0 -flto=auto  -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -m64  -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -march=x86-64-v3 -mtune=generic
+
+
 %description
 GIMP (GNU Image Manipulation Program) is a powerful image composition and
 editing program, which can be extremely useful for creating logos and other
@@ -331,6 +336,7 @@ appstream-util validate-relax --nonet %{buildroot}%{_datadir}/appdata/*.xml
 %{_libdir}/libgimpwidgets-3.0.so.0*
 
 %files devel
+%doc %{_datadir}/doc
 %{_libdir}/*.so
 %{_includedir}/gimp-3.0
 %{_libdir}/pkgconfig/*
@@ -342,7 +348,7 @@ appstream-util validate-relax --nonet %{buildroot}%{_datadir}/appdata/*.xml
 %{_datadir}/vala/vapi/gimp-ui-3.0.*
 
 %files devel-doc
-%doc %{_datadir}/gtk-doc
+%doc %{_datadir}/doc
 
 %files devel-tools
 %{_bindir}/gimptool-%{lib_api_version}
