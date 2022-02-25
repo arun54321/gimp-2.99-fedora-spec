@@ -113,6 +113,7 @@ BuildRequires:  pkgconfig(zlib)
 BuildRequires:  vala
 BuildRequires:  xdg-utils
 BuildRequires:  xorg-x11-server-Xvfb
+BuildRequires:  gi-docgen
 Requires:       %{name}-libs = %{version}-%{release}
 Requires:       %{name}-data = %{version}-%{release}
 Requires:       hicolor-icon-theme
