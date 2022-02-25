@@ -331,8 +331,6 @@ appstream-util validate-relax --nonet %{buildroot}%{_datadir}/appdata/*.xml
 %{_libdir}/libgimpwidgets-3.0.so.0*
 
 %files devel
-%doc HACKING.md README.md
-%doc %{_datadir}/gtk-doc
 %{_libdir}/*.so
 %{_includedir}/gimp-3.0
 %{_libdir}/pkgconfig/*
