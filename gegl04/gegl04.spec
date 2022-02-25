@@ -9,7 +9,7 @@ Summary:        Graph based image processing framework
 # The main package only installs the libs, which makes the license:
 License:        LGPLv3+
 URL:            http://www.gegl.org/
-Source0:        http://download.gimp.org/pub/gegl/%{apiver}/gegl-%{version}.tar.xz
+Source0:        https://download.gimp.org/pub/gegl/%{apiver}/gegl-%{version}.tar.xz
 
 Patch0:         gegl04-openexr.patch
 Patch1:         gegl04-gtk.patch
