@@ -126,7 +126,7 @@ Recommends:     pygobject2
 Recommends:     rawtherapee
 
 
-%global optflags %{optflags} -O0 -march=x86-64-v3 -mtune=generic
+%global optflags %{optflags} -O3 -march=x86-64-v3 -mtune=generic
 
 %description
 GIMP (GNU Image Manipulation Program) is a powerful image composition and
