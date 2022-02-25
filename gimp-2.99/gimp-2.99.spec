@@ -126,9 +126,7 @@ Recommends:     pygobject2
 Recommends:     rawtherapee
 
 
-%undefine _auto_set_build_flags
-RPM_OPT_FLAGS=x86_64 -O0 -flto=auto  -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -m64  -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -march=x86-64-v3 -mtune=generic
-
+%global optflags %{optflags} -O0 -march=x86-64-v3 -mtune=generic
 
 %description
 GIMP (GNU Image Manipulation Program) is a powerful image composition and
