@@ -33,6 +33,8 @@ License:	LGPLv3+ and GPLv3+
 URL:		http://www.gegl.org/babl/
 Source0:	https://download.gimp.org/pub/babl/%{apiver}/%{name}-%{version}.tar.xz
 
+Patch0:         45.diff
+
 BuildRequires:	gcc
 BuildRequires:	openssh-clients
 BuildRequires:	gobject-introspection-devel
