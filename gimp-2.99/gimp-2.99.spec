@@ -30,6 +30,7 @@ Patch2:         gimp-2.99-default-font.patch
 
 
 BuildRequires:  aalib-devel
+BuildRequires:  appstream
 BuildRequires:  curl
 BuildRequires:  dbus-daemon
 BuildRequires:  desktop-file-utils
