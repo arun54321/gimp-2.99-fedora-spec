@@ -8,7 +8,7 @@
 %global lib_api_version %{major}.%{minor}
 %global gettext_version 30
 
-%global commit          618e11e602418e8c9639991b73a2a7f2b302ac38
+%global commit          b1e13b5a15096d65d94571e69cf08d45904b5719
 %global snapshotdate    20220223
 %global shortcommit     %(c=%{commit}; echo ${c:0:7})
 
