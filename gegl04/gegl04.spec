@@ -1,7 +1,7 @@
 %global apiver 0.4
 
 Name:           gegl04
-Version:        0.4.36
+Version:        0.4.38
 Release:        1%{?dist}
 Summary:        Graph based image processing framework
 
