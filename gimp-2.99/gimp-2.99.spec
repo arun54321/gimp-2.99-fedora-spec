@@ -9,7 +9,7 @@
 %global gettext_version 30
 
 %global commit          b1e13b5a15096d65d94571e69cf08d45904b5719
-%global snapshotdate    20220223
+%global snapshotdate    20220821
 %global shortcommit     %(c=%{commit}; echo ${c:0:7})
 
 Name:       gimp-2.99
