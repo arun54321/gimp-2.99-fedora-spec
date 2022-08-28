@@ -3,7 +3,7 @@
 
 %global major 2
 %global minor 99
-%global micro 10
+%global micro 12
 %global binver %{major}.%{minor}
 %global lib_api_version %{major}.%{minor}
 %global gettext_version 30
@@ -13,7 +13,7 @@
 %global shortcommit     %(c=%{commit}; echo ${c:0:7})
 
 Name:       gimp-2.99
-Version:    2.99.10
+Version:    2.99.12
 Release:    2%{?dist}
 Summary:    GNU Image Manipulation Program
 
